@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+html {
+    font-size: 1rem;
+}
+
+:root {--main-color: 0 153 236; --transition: .5s;}
+
+/*==========================================| RESET |==========================================*/
+body, body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*==========================================| HEADER |==========================================*/
+header {
+    width: 100%;
+    height: 4.375rem;
+}
+
+header >div {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+
+}
+
+#logo {
+    display: inherit;
+    width: max-content;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(var(--main-color))
+}
+
+#logo svg {
+    width: 3.125rem;
+    height: auto;
+    fill: rgb(var(--main-color))
+}
+
+#logo span {
+    line-height: 1;
+    font-size: .9rem;
+    margin-left: .5rem;
+}
+
+#burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.35rem;
+    height: 1.85rem;
+    padding: 5px;
+}
+
+#burger span {
+    width: 100%;
+    height: 2px;
+    background: rgb(var(--main-color));
+    transition: var(--transition);
+}
