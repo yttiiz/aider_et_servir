@@ -1,12 +1,12 @@
 //==========================| Elements |==========================//
+const burger = document.querySelector('#burger button')
 
 //==========================| Events |==========================//
 burger.addEventListener('click', moveMenu)
 
 //==========================| Functions |==========================//
 function moveMenu() {
-    const burger = document.querySelector('#burger button'),
-    container = document.querySelector('.nav-container'),
+    const container = document.querySelector('.nav-container'),
     navigation = container.querySelector('nav'),
     spans = burger.querySelectorAll('span')
 

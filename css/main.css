@@ -4,7 +4,7 @@ html {
     font-size: 1rem;
 }
 
-:root {--main-color: 0 153 236; --clear-white: 250 250 250; --clear-grey: 230 230 230; --dark: 10 10 10; --transition: .5s;}
+:root {--main-color: 51 101 138; --sky-blue: 134 187 216; --honey-yellow: 246 174 45; --orange-red: 242 100 25; --clear-white: 250 250 250; --clear-grey: 230 230 230; --dark: 10 10 10; --transition: .5s;}
 
 /*==========================================| RESET |==========================================*/
 body, body * {
@@ -12,6 +12,10 @@ body, body * {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -25,6 +29,7 @@ button {
     cursor: pointer;
 }
 
+/*==========================================| GENERAL |==========================================*/
 main >div, footer >div {
     padding: 0 1.25rem;
 }
@@ -47,24 +52,25 @@ header >div {
     display: inherit;
     width: max-content;
     align-items: center;
+    padding-left: 1rem;
     text-decoration: none;
     color: rgb(var(--main-color))
 }
 
 #logo svg {
-    width: 3.125rem;
+    width: 2rem;
     height: auto;
     fill: rgb(var(--main-color))
 }
 
 #logo span {
-    line-height: 1;
     font-size: .9rem;
     margin-left: .5rem;
 }
 
 #burger {
     z-index: 2;
+    padding-right: 1rem;
 }
 
 #burger button {
@@ -72,14 +78,14 @@ header >div {
     flex-direction: column;
     justify-content: space-between;
     width: 2.35rem;
-    height: 1.85rem;
+    height: 2rem;
     padding: 5px;
 }
 
 #burger button span {
     width: 100%;
     height: 2px;
-    background: rgb(var(--main-color));
+    background: rgb(var(--sky-blue));
     transition: var(--transition);
     transform-origin: left center;
 }
@@ -103,7 +109,7 @@ header >div {
     height: 100%;
     right: -70%;
     background: rgb(var(--clear-white));
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     transition: var(--transition);
 }
 
@@ -111,17 +117,29 @@ header >div {
     right: 0;
 }
 
-.nav-container nav li {
-    display: flex;
-    padding: .75rem;
-}
 
-.nav-container nav li:not(:last-child) {
+.nav-container li {
     border-bottom: 1px solid rgb(var(--clear-grey));
 }
 
+.nav-container li a {
+    display: flex;
+    padding: .75rem;
+    color: rgb(var(--main-color));
+}
+
+.nav-container li svg {
+    width: 1rem;
+    height: auto;
+    margin-right: .65rem;
+}
+
+.nav-container li svg path {
+    fill: rgb(var(--orange-red));
+}
+
 .line1 {
-    transform: rotateZ(40deg);
+    transform: rotateZ(45deg) translate(2px, -3px);
 }
 
 .line2 {
@@ -129,5 +147,5 @@ header >div {
 }
 
 .line3 {
-    transform: rotateZ(-40deg);
+    transform: rotateZ(-45deg) translate(3px, 2px);
 }
