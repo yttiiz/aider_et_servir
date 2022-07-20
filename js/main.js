@@ -10,8 +10,8 @@ function moveMenu() {
     navigation = container.querySelector('nav'),
     spans = burger.querySelectorAll('span')
 
-    container.classList.toggle('dark')
-    navigation.classList.toggle('move')
+    container.classList.toggle('none')
+    navigation.classList.toggle('moveMenuLeft')
     
     spans.forEach((span, index) => {
         switch(index) {

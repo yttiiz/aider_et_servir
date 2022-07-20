@@ -30,6 +30,13 @@ button {
 }
 
 /*==========================================| GENERAL |==========================================*/
+body {
+    display: grid;
+    grid-template-rows: 4.375rem auto auto;
+    overflow-x: hidden;
+    color: rgb(var(--dark));
+}
+
 main >div, footer >div {
     padding: 0 1.25rem;
 }
@@ -38,7 +45,6 @@ main >div, footer >div {
 header {
     position: relative;
     width: 100%;
-    height: 4.375rem;
 }
 
 header >div {
@@ -85,7 +91,7 @@ header >div {
 #burger button span {
     width: 100%;
     height: 2px;
-    background: rgb(var(--sky-blue));
+    background: rgb(var(--main-color));
     transition: var(--transition);
     transform-origin: left center;
 }
@@ -96,11 +102,12 @@ header >div {
     height: 100vh;
     top: 0;
     z-index: 1;
+    background: rgb(var(--dark) / .7);
     transition: var(--transition);
 }
 
-.nav-container.dark {
-    background: rgb(var(--dark) / .7);
+.nav-container.none {
+    display: none;
 }
 
 .nav-container nav {
@@ -113,10 +120,9 @@ header >div {
     transition: var(--transition);
 }
 
-.nav-container nav.move {
-    right: 0;
+.nav-container nav.moveMenuLeft {
+    animation: moveMenuLeft var(--transition) forwards;
 }
-
 
 .nav-container li {
     border-bottom: 1px solid rgb(var(--clear-grey));
@@ -148,4 +154,59 @@ header >div {
 
 .line3 {
     transform: rotateZ(-45deg) translate(3px, 2px);
+}
+
+@keyframes moveMenuLeft {
+    from {
+        right: -70%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+/*==========================================| MAIN |==========================================*/
+section {
+    padding-top: 2rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.main-container h1, .main-container p {
+    text-align: center;
+}
+
+.main-container h1 {
+    font-size: 2.2rem;
+    color: rgb(var(--orange-red));
+}
+
+.main-container p {
+    font-size: inherit;
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+}
+
+.main-container a {
+    padding: .9rem 2rem;
+    background: rgb(var(--orange-red));
+    font-weight: 700;
+    color: rgb(var(--dark));
+    border-radius: .4rem;
+}
+
+.main-container div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
