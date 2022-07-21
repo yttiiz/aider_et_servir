@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   data-name="Layer 2"
+   id="Layer_2"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   sodipodi:docname="description_continue_icon.svg"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview746"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="0.771"
+     inkscape:cx="469.5201"
+     inkscape:cy="500"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <defs
+     id="defs735">
+    <style
+       id="style733">.cls-1{fill:none;stroke:#020202;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+  </defs>
+  <path
+     class="cls-1"
+     d="M 913.85579,250.56433 C 829.40869,111.09668 676.18592,17.863812 501.21799,17.863812 c -266.33321,0 -482.095585,215.843578 -482.095585,482.095588 0,191.25648 111.372755,356.49674 272.829135,434.43169"
+     id="path737"
+     style="stroke:#86bbd8;stroke-opacity:1" />
+  <path
+     class="cls-1"
+     d="M 980.87759,548.53273 C 956.51789,791.96778 751.06777,982.13619 501.21799,982.13619"
+     id="path739"
+     style="stroke:#86bbd8;stroke-opacity:1" />
+  <line
+     class="cls-1"
+     x1="914.08319"
+     x2="914.08319"
+     y1="47.420296"
+     y2="250.56433"
+     id="line741"
+     style="stroke:#86bbd8;stroke-opacity:1" />
+  <line
+     class="cls-1"
+     x1="913.53107"
+     x2="712.22211"
+     y1="250.56433"
+     y2="250.56433"
+     id="line743"
+     style="stroke:#86bbd8;stroke-opacity:1" />
+</svg>

@@ -37,8 +37,8 @@ body {
     color: rgb(var(--dark));
 }
 
-main >div, footer >div {
-    padding: 0 1.25rem;
+main section, footer >div {
+    padding: 2rem 1.25rem;
 }
 
 /*==========================================| HEADER |==========================================*/
@@ -167,12 +167,13 @@ header >div {
 
 /*==========================================| MAIN |==========================================*/
 section {
-    padding-top: 2rem;
+    text-align: center;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
 }
 
 .main-container img {
@@ -182,26 +183,25 @@ section {
     margin-bottom: 2rem;
 }
 
-.main-container h1, .main-container p {
-    text-align: center;
-}
-
 .main-container h1 {
     font-size: 2.2rem;
     color: rgb(var(--orange-red));
 }
 
 .main-container p {
-    font-size: inherit;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+}
+
+.main-container p, .description-container ul {
     margin: 1.5rem 0;
-    line-height: 1.5rem;
 }
 
 .main-container a {
     padding: .9rem 2rem;
     background: rgb(var(--orange-red));
     font-weight: 700;
-    color: rgb(var(--dark));
+    color: rgb(var(--clear-white));
     border-radius: .4rem;
 }
 
@@ -209,4 +209,35 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.description-container {
+    background: rgb(var(--clear-grey));
+}
+
+.description-container h2 {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.description-container figure {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    font-size: inherit;
+    line-height: 1.5rem;
+}
+
+.description-container figure img {
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.description-container figure strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(var(--main-color));
 }
