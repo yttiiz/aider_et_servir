@@ -1,18 +1,28 @@
 //==========================| Elements |==========================//
-const burger = document.querySelector('#burger button')
+const burger = document.querySelector('#burger button'),
+container = document.querySelector('.nav-container'),
+navigation = container.querySelector('nav'),
+spans = burger.querySelectorAll('span')
+
+let switcher = 0
 
 //==========================| Events |==========================//
 burger.addEventListener('click', moveMenu)
 
 //==========================| Functions |==========================//
 function moveMenu() {
-    const container = document.querySelector('.nav-container'),
-    navigation = container.querySelector('nav'),
-    spans = burger.querySelectorAll('span')
+    if (switcher === 0) {
+        container.classList.remove('disappear')
+        container.classList.add('appear')
+        switcher++
+    } else {
+        container.classList.remove('appear')
+        container.classList.add('disappear')
+        switcher--
+    }
 
-    container.classList.toggle('none')
-    navigation.classList.toggle('moveMenuLeft')
-    
+    navigation.classList.toggle('move')
+
     spans.forEach((span, index) => {
         switch(index) {
             case 0:

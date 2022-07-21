@@ -97,20 +97,25 @@ header >div {
 }
 
 .nav-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
+    right: -100%;
     top: 0;
     z-index: 1;
+    transition: background var(--transition);
+}
+
+.nav-container.appear {
+    right: 0;
     background: rgb(var(--dark) / .7);
-    transition: var(--transition);
 }
 
-.nav-container.none {
-    display: none;
+.nav-container.disappear {
+    animation: backToInitialPosition 0 var(--transition), bgAnim var(--transition);
 }
 
-.nav-container nav {
+.navigator {
     position: inherit;
     width: 70%;
     height: 100%;
@@ -120,8 +125,8 @@ header >div {
     transition: var(--transition);
 }
 
-.nav-container nav.moveMenuLeft {
-    animation: moveMenuLeft var(--transition) forwards;
+.navigator.move {
+    right: 0;
 }
 
 .nav-container li {
@@ -156,12 +161,18 @@ header >div {
     transform: rotateZ(-45deg) translate(3px, 2px);
 }
 
-@keyframes moveMenuLeft {
+@keyframes bgAnim {
     from {
-        right: -70%;
+        background: rgb(var(--dark) / .7);
     }
     to {
-        right: 0;
+        background: rgb(var(--dark) / 0);
+    }
+}
+
+@keyframes backToInitialPosition {
+    to {
+        right: -100%;
     }
 }
 
