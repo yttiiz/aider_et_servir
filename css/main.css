@@ -103,16 +103,15 @@ header >div {
     right: -100%;
     top: 0;
     z-index: 1;
-    transition: background var(--transition);
 }
 
 .nav-container.appear {
     right: 0;
-    background: rgb(var(--dark) / .7);
+    animation: bgAnimFadeIn var(--transition) forwards;
 }
 
 .nav-container.disappear {
-    animation: backToInitialPosition 0 var(--transition), bgAnim var(--transition);
+    animation: backToInitialPosition var(--transition) forwards, bgAnimFadeOut var(--transition) forwards;
 }
 
 .navigator {
@@ -122,7 +121,7 @@ header >div {
     right: -70%;
     background: rgb(var(--clear-white));
     padding-top: 3.5rem;
-    transition: var(--transition);
+    transition: right var(--transition);
 }
 
 .navigator.move {
@@ -161,12 +160,15 @@ header >div {
     transform: rotateZ(-45deg) translate(3px, 2px);
 }
 
-@keyframes bgAnim {
-    from {
+@keyframes bgAnimFadeIn {
+    to {
         background: rgb(var(--dark) / .7);
     }
+}
+
+@keyframes bgAnimFadeOut {
     to {
-        background: rgb(var(--dark) / 0);
+        opacity: 0;
     }
 }
 
