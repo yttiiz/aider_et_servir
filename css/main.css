@@ -116,11 +116,14 @@ header >div {
 
 .navigator {
     position: inherit;
+    display: flex;
     width: 70%;
     height: 100%;
     right: -70%;
+    flex-direction: column;
+    justify-content: space-between;
     background: rgb(var(--clear-white));
-    padding-top: 3.5rem;
+    padding: 3.5rem 0;
     transition: right var(--transition);
 }
 
@@ -128,24 +131,44 @@ header >div {
     right: 0;
 }
 
-.nav-container li {
+.navigator li {
     border-bottom: 1px solid rgb(var(--clear-grey));
 }
 
-.nav-container li a {
-    display: flex;
+.navigator li a, .navigator div {
     padding: .75rem;
+}
+.navigator li a {
+    display: flex;
     color: rgb(var(--main-color));
 }
 
-.nav-container li svg {
+.navigator li svg {
     width: 1rem;
     height: auto;
     margin-right: .65rem;
 }
 
-.nav-container li svg path {
+.navigator li svg path {
     fill: rgb(var(--orange-red));
+}
+
+.navigator div {
+    display: inherit;
+    flex-direction: inherit;
+    font-size: .8rem;
+}
+
+.navigator div span {
+    text-align: center;
+}
+
+.navigator div span:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.navigator div span a {
+    color: rgb(var(--main-color))
 }
 
 .line1 {
@@ -224,7 +247,7 @@ section {
     align-items: center;
 }
 
-.description-container {
+.description-container:nth-child(even) {
     background: rgb(var(--clear-grey));
 }
 
@@ -233,24 +256,91 @@ section {
     font-size: 1.5rem;
 }
 
-.description-container figure {
-    display: flex;
-    margin: 0 auto;
-    width: 70%;
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
+.description-container dl {
+    padding: 1rem 15%;
+    line-height: 1.5rem;
+}
+
+.description-container dl img {
+    width: 35%;
+    margin-bottom: 1rem;   
+}
+
+.description-container dt {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: rgb(var(--main-color));
+}
+
+.description-container ul {
     font-size: inherit;
     line-height: 1.5rem;
 }
 
-.description-container figure img {
-    width: 40%;
-    margin-bottom: 1rem;
+.description-container li:not(:last-child) {
+    margin-bottom: 5rem;
 }
 
-.description-container figure strong {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: rgb(var(--main-color));
+.description-container ul div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.description-container ul div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 25%, rgb(var(--dark) / .85));
+}
+
+.description-container ul h3, .description-container ul p {
+    z-index: 1;
+    padding:  0 1rem 1rem;
+    color: rgb(var(--clear-white));
+}
+
+footer {
+    background: rgb(var(--main-color));
+    color: rgb(var(--clear-white));
+}
+
+footer >div >div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+footer dl {
+    width: 47.5%;
+}
+
+footer dt {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: rgb(var(--sky-blue));
+}
+
+footer dd {
+    padding: .15rem 0;
+}
+footer dd a {
+    color: rgb(var(--clear-white));
+    font-weight: 300;
+}
+
+footer span {
+    display: block;
+    text-align: center;
+    font-size: .85rem;
+    border-top: 1px solid rgb(var(--clear-white) / .15);
+    padding-top: 1rem;
 }
