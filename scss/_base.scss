@@ -1,0 +1,15 @@
+@use './var/variables';
+@use './mixins/mixins';
+@use './placeholder/placeholder';
+
+@import url(variables.$font);
+
+//variables
+$font-size: variables.$font-size;
+@mixin reset-body {
+    @include mixins.reset-body;  
+}
+
+@mixin reset-button {
+    @include mixins.reset-button;
+}

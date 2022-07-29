@@ -1,0 +1,15 @@
+//Reset body and his children
+@mixin reset-body ($font: 'Roboto') {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font, sans-serif;
+}
+
+//Reset button
+@mixin reset-button ($default: none) {
+    border: $default;
+    outline: $default;
+    background: $default;
+    cursor: pointer;
+}

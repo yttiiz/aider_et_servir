@@ -1,0 +1,22 @@
+@use 'base';
+
+html {
+    font-size: base.$font-size;
+}
+
+/*==========================================| RESET |==========================================*/
+body, body * {
+    @include base.reset-body;
+}
+
+button {
+    @include base.reset-button;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container, .description-container {
+    @extend %flex-center;
+}
