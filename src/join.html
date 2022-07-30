@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aider et Servir est une association à but lucratif qui a pour mission de venir en aide au personnes agées isolées ou handicapées.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Aider et Servir | Contact</title>
+    <title>Aider et Servir | Nous rejoindre</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
     <header>
@@ -64,7 +66,7 @@
                     </ul>
                     <div>
                         <span>© Aider et Servir - 2022</span>
-                        <span>Webdesigner : <a href="http://" target="_blank" rel="noopener noreferrer">Dominique Talis</a></span>
+                        <span>Webdesigner : <a href="https://www.dominiquetalis.com" target="_blank" rel="noopener noreferrer">Dominique Talis</a></span>
                         <span>Illustrations : <a href="https://stock.adobe.com/fr/" target="_blank" rel="noopener noreferrer">Adobe Stock</a>, <a href="https://www.o2.fr/" target="_blank" rel="noopener noreferrer">O2.fr</a> et <a href="https://icon-icons.com/fr/" target="_blank" rel="noopener noreferrer">Icon Icons</a></span>
                     </div>
                 </nav>
@@ -73,7 +75,39 @@
     </header>
     <main>
         <article>
-            <section class="main-container">
+            <section>
+                <div class="main-container">
+                    <h1>Envoyez votre demande</h1>
+                    <form>
+                        <div>
+                            <label for="firstname">Nom</label>
+                            <input type="text" name="firstname" placeholder="Entrez votre nom">
+                        </div>
+                        <div>
+                            <label for="lastname">Prénom</label>
+                            <input type="text" name="lastname" placeholder="Entrez votre prénom">
+                        </div>
+                        <div>
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" name="phone" placeholder="Entrez votre numéro">
+                        </div>
+                        <div>
+                            <label for="file">CV (uniquement en pdf)</label>
+                            <input type="file" name="file" accept=".pdf">
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea name="message" placeholder="Entrez votre message"></textarea>
+                        </div>
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </section>
+            <section>
+                <div class="description-container">
+                    <h2>Comment ça va se passer&nbsp;?</h2>
+                    <p>Une fois que nous aurons reçu vos coordonnées, nous nous engageons à étudier votre dossier sous 72 heures. Etant donné le contexte dans lequel nous sommes, il se peut que vous puissiez être récontacté avant ce délai. A l'inverse, au-délà de 72 heures, nous garderons votre CV en archive et nous vous recontacterons ultérieurement.</p>
+                </div>
             </section>
         </article>
     </main>
@@ -111,5 +145,6 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/form-validation.js"></script>
 </body>
 </html>

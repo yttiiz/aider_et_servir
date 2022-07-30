@@ -1,31 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
-.main-container, .description-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+form {
+    text-align: left;
+    margin: 1.5rem 0;
 }
 
-html {
-  font-size: 1rem;
+form>div {
+    display: flex;
+    flex-direction: column;
 }
 
-/*==========================================| RESET |==========================================*/
-body, body * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+form label {
+    margin-bottom: .25rem;
 }
 
-button {
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
+form input:not([type="submit"]),
+textarea {
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid rgb(var(--dark) / .3);
+    border-radius: .25rem;
 }
 
-a {
-  text-decoration: none;
+form input[type="file"] {
+    width: 100%;
 }
 
-/*# sourceMappingURL=contact.css.map */
+textarea {
+    width: 100%;
+    height: 15rem;
+}
+
+form input:not([type="submit"])::placeholder {
+    color: rgb(var(--dark) / .3);
+}
+
+form input:not([type="submit"])::-ms-input-placeholder {
+    color: rgb(var(--dark) / .3)
+}
+
+form input:not([type="submit"]):focus,
+textarea {
+    outline: none;
+}
+
+form input:not([type="submit"]).red, textarea.red {
+    border: 1px solid red;
+}
