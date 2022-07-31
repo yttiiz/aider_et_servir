@@ -1,9 +1,9 @@
 form {
     text-align: left;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto 0;
 }
 
-form>div {
+form >div {
     display: flex;
     flex-direction: column;
 }
@@ -45,4 +45,8 @@ textarea {
 
 form input:not([type="submit"]).red, textarea.red {
     border: 1px solid red;
+}
+
+form, .description-container.contact {
+    width: clamp(220px, 100%, 686px);
 }

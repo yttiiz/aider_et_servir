@@ -42,12 +42,12 @@ main section, footer >div {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: clamp(2.2rem, 4.5vw, 2.5rem);
     color: rgb(var(--orange-red));
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-weight: 200;
 }
 
@@ -121,7 +121,7 @@ header >div {
 }
 
 .nav-container.disappear {
-    animation: backToInitialPosition var(--transition) forwards, bgAnimFadeOut var(--transition) forwards;
+    animation: backToInitialPosition var(--transition) forwards;
 }
 
 .navigator {
@@ -141,6 +141,10 @@ header >div {
     right: 0;
 }
 
+.navigator ul {
+    display: flex;
+    flex-direction: column;
+}
 .navigator li {
     border-bottom: 1px solid rgb(var(--clear-grey));
 }
@@ -200,12 +204,6 @@ header >div {
     }
 }
 
-@keyframes bgAnimFadeOut {
-    to {
-        opacity: 0;
-    }
-}
-
 @keyframes backToInitialPosition {
     to {
         right: -100%;
@@ -228,10 +226,13 @@ section:nth-child(even) {
 .main-container, .main-container.home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 4rem;
 }
 
 .main-container figure {
+    display: inherit;
+    align-items: center;
     width: 100%;
     margin: 0 auto;
 }
@@ -244,15 +245,15 @@ section:nth-child(even) {
 }
 
 .main-container p {
-    line-height: 1.8rem;
-    font-size: 1.2rem;
+    line-height: clamp(1.8rem, 3vw, 2.2rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .main-container p, .description-container >p, .description-container >span, .description-container ul {
     margin: 1.5rem 0;
 }
 
-.main-container a, .main-container input[type="submit"] {
+.main-container a, .description-container a, .main-container input[type="submit"] {
     padding: .9rem 2rem;
     background: rgb(var(--orange-red));
     font-weight: 700;
@@ -260,10 +261,24 @@ section:nth-child(even) {
     border-radius: .4rem;
 }
 
+.description-container a {
+    align-self: center;
+    width: clamp(300px, 100%, 360px);       
+}
+
+.main-container b, .description-container b {
+    color: rgb(var(--main-color))
+}
+
 .main-container div:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .description-container >span {
@@ -282,14 +297,16 @@ section:nth-child(even) {
 }
 
 .description-container dt {
-    font-size: 1.25rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     font-weight: 700;
     margin-bottom: .5rem;
     color: rgb(var(--main-color));
 }
 
 .description-container >p {
-    line-height: 1.5rem;
+    line-height: clamp(1.5rem, 3vw, 1.85rem);
+    font-size: clamp(.9rem, 1.85vw, 1rem);
+
 }
 
 .description-container ul {
@@ -327,6 +344,14 @@ section:nth-child(even) {
     z-index: 1;
     padding:  0 1rem 1rem;
     color: rgb(var(--clear-white));
+}
+
+.img-circle.responsive {
+    align-self: center;
+    object-fit: cover;
+    border-radius: 50%;
+    width: clamp(250px, 50%, 350px);
+    height: auto;
 }
 
 /*==========================================| FOOTER |==========================================*/
@@ -379,10 +404,6 @@ footer span {
         grid-template-rows: 6.25rem auto auto;
     }
 
-    h2 {
-        font-size: 2rem;
-    }
-
     #logo {
         padding-left: 2rem;
     }
@@ -407,12 +428,14 @@ footer span {
     .description-container ul {
         align-items: center;
     }
+
 }
 
 @media screen and (min-width: 750px) {
     .main-container.home {
         flex-direction: row;
         gap: 2rem;
+        height: clamp(400px, calc(50 * 1vmax), 70vh);
     }
 
     .main-container.home figure {
@@ -441,21 +464,42 @@ footer span {
 }
 
 @media screen and (min-width: 960px) {
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
     section >div, footer >div {
         max-width: 960px;
     }
 
+    #burger {
+        display: none;
+    }
+
+    .nav-container {
+        position: unset;
+        width: unset;
+        height: unset;
+    }
+    
+    .navigator {
+        right: unset;
+        width: unset;
+        background: unset;
+        padding: 0 2rem 0;
+    }
+
+    .navigator ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navigator li {
+        border-bottom: unset;
+    }
+
+    .navigator >div {
+        display: none;
+    }
+
     .main-container.home figure, .main-container.home div {
         flex: 1 1 50%;
-    }
-    .main-container.home p {
-        line-height: 2.1rem;
-        font-size: 1.5rem;
     }
 
     .description-container ul {
